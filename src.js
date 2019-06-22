@@ -25,7 +25,7 @@ $(window).on('load', function() {
                 arr.unshift(0);
                 arr[0]=17;
             }            
-            $('.ketqua').text(arr);
+            $('.ketqua').text("<p class='font-weight-bold' style='font-size: 1.5em; color: darkcyan;'>"+arr+"</p>");
             arr=[];
         }
     });
