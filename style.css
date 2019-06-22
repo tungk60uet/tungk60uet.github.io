@@ -77,14 +77,25 @@ a.h2{
     border-top: 10px solid #4caf50;
 }
 
-/****** extra *******/
-#Reloadpage{
-    cursor:pointer;
-}
 body {
-    background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }
+    background: linear-gradient(288deg, #2ec39c, #ddc16a, #7389e3);
+    background-size: 600% 600%;
+    -webkit-animation: bodyGradiant 7s ease infinite;
+    -moz-animation: bodyGradiant 7s ease infinite;
+    animation: bodyGradiant 7s ease infinite;  
+}
+@-webkit-keyframes bodyGradiant {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@-moz-keyframes bodyGradiant {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@keyframes bodyGradiant { 
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
