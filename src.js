@@ -8,7 +8,7 @@ isCheat=false;
 $(window).on('load', function() {
 
     $('.font-weight-light').click(function(){
-        isCheat=true;
+        isCheat=!isCheat;
     });
     
     $(".random-btn" ).click(function() {
