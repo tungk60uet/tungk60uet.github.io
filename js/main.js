@@ -238,19 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   document.head.appendChild(style);
 
-  // Parallax effect for hero section
-  window.addEventListener("scroll", function () {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector(".hero-content");
-    const heroImage = document.querySelector(".hero-image");
-
-    if (heroContent && heroImage) {
-      const speed = scrolled * 0.5;
-      heroContent.style.transform = `translateY(${speed * 0.3}px)`;
-      heroImage.style.transform = `translateY(${speed * 0.2}px)`;
-    }
-  });
-
   // Enhanced navigation highlighting with progress indicator
   function createProgressBar() {
     const progressBar = document.createElement("div");
