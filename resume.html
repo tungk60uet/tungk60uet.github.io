@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Văn Tùng - Resume</title>
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Print-optimized settings */
+      @page {
+        size: A4;
+        margin: 15mm;
+      }
+
+      body {
+        font-family: "Arial", "Calibri", sans-serif;
+        font-size: 11pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header Section */
+      .header {
+        text-align: center;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+      }
+
+      .header h1 {
+        font-size: 24pt;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .header .title {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .contact-info {
+        font-size: 10pt;
+        line-height: 1.6;
+      }
+
+      .contact-info a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      /* Section Styles */
+      .section {
+        margin-bottom: 15px;
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        font-size: 13pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1.5px solid #000;
+        margin-bottom: 8px;
+        padding-bottom: 3px;
+      }
+
+      /* Professional Summary */
+      .summary {
+        text-align: justify;
+        margin-bottom: 10px;
+      }
+
+      /* Skills Section */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .skill-category {
+        margin-bottom: 8px;
+      }
+
+      .skill-category strong {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .skill-list {
+        font-size: 10pt;
+      }
+
+      /* Experience Section */
+      .job {
+        margin-bottom: 12px;
+        page-break-inside: avoid;
+      }
+
+      .job-header {
+        margin-bottom: 5px;
+      }
+
+      .job-title {
+        font-weight: bold;
+        font-size: 11pt;
+      }
+
+      .company {
+        font-weight: bold;
+      }
+
+      .period {
+        font-style: italic;
+        float: right;
+      }
+
+      .job-description {
+        margin-top: 5px;
+      }
+
+      .job-description ul {
+        margin-left: 18px;
+        margin-top: 3px;
+      }
+
+      .job-description li {
+        margin-bottom: 3px;
+        text-align: justify;
+      }
+
+      /* Projects Section */
+      .project {
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      .project-title {
+        font-weight: bold;
+      }
+
+      .project-tech {
+        font-style: italic;
+        font-size: 10pt;
+        color: #333;
+      }
+
+      /* Education Section */
+      .education-item {
+        margin-bottom: 8px;
+      }
+
+      .degree {
+        font-weight: bold;
+      }
+
+      .university {
+        font-style: italic;
+      }
+
+      .education-details {
+        margin-top: 5px;
+        margin-left: 18px;
+      }
+
+      .education-details li {
+        margin-bottom: 2px;
+      }
+
+      /* Print Styles */
+      @media print {
+        body {
+          padding: 0;
+          max-width: 100%;
+        }
+
+        .header {
+          margin-bottom: 10px;
+        }
+
+        .section {
+          margin-bottom: 12px;
+        }
+
+        a {
+          color: #000 !important;
+          text-decoration: none !important;
+        }
+
+        /* Prevent page breaks inside important sections */
+        .job,
+        .project,
+        .education-item {
+          page-break-inside: avoid;
+        }
+
+        /* Force page break after experience section */
+        .page-break-after {
+          page-break-after: always;
+        }
+      }
+
+      /* Utility Classes */
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>NGUYỄN VĂN TÙNG</h1>
+      <div class="title">Senior Unity Developer</div>
+      <div class="contact-info">
+        Trung Văn, Hà Nội, Vietnam |
+        <a href="tel:+84374280434">0374 280 434</a> |
+        <a href="mailto:tungk60uet@gmail.com">tungk60uet@gmail.com</a> |
+        <a href="https://tungteen.work/">tungteen.work</a>
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <div class="summary">
+        Senior Unity Developer with 7+ years of experience in developing mobile,
+        multiplayer, and blockchain-integrated games. Experience in Unity3D, C#,
+        and scalable game architecture. Successfully delivered multiple games
+        with millions of downloads. Strong background in performance
+        optimization, multiplayer systems, and cross-platform development.
+      </div>
+    </div>
+
+    <!-- Core Skills -->
+    <div class="section">
+      <div class="section-title">Core Skills</div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Programming Languages:</strong>
+          <div class="skill-list">C#, TypeScript, JavaScript, Python, Lua</div>
+        </div>
+        <div class="skill-category">
+          <strong>Game Engines & Tools:</strong>
+          <div class="skill-list">
+            Unity3D, Git, SmartFox, Mirror, FishNet, AR/VR
+          </div>
+        </div>
+        <div class="skill-category">
+          <strong>Software Design:</strong>
+          <div class="skill-list">
+            OOP, SOLID Principles, Dependency Injection, Design Patterns
+            (Command, Observer, Factory, Singleton, State Machine, Object
+            Pool,...)
+          </div>
+        </div>
+        <div class="skill-category">
+          <strong>Development Expertise:</strong>
+          <div class="skill-list">
+            Multiplayer Architecture, WebGL/Mobile UI, SDK Integration,
+            Payments, Analytics, Backend Services, Blockchain Integration
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notable Projects -->
+    <div class="section">
+      <div class="section-title">Notable Projects</div>
+
+      <div class="project">
+        <div class="project-title">
+          Pegaxy V2 - Multiplayer Horse Racing Game
+        </div>
+        <div class="project-tech">
+          Unity3D, Multiplayer, Blockchain | https://pegaxy.io
+        </div>
+        <div>
+          Skill-based horse racing game with blockchain integration and
+          real-time multiplayer racing mechanics
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Cyber Fighters - Mobile Action Game</div>
+        <div class="project-tech">
+          Unity3D, Mobile, Action | Google Play & App Store
+        </div>
+        <div>
+          Hack and slash action game with systems including shop, inventory,
+          character progression, and tournaments
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Tổ Tôm Online - Card Game</div>
+        <div class="project-tech">
+          Unity3D, Multiplayer, Card Game | Google Play & App Store
+        </div>
+        <div>
+          Traditional Vietnamese card game with real-time multiplayer
+          functionality and server integration
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          FPT Digital Race 2018 - Self-driving Car (Champion)
+        </div>
+        <div class="project-tech">Computer Vision, AI, Python</div>
+        <div>
+          Autonomous vehicle competition using computer vision and machine
+          learning for lane detection and obstacle avoidance
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">BLife - Eye-tracking Virtual Keyboard</div>
+        <div class="project-tech">Eye Tracking, Accessibility, Research</div>
+        <div>
+          Graduation thesis project: Virtual keyboard for motor-impaired users
+          using eye-tracking technology
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <!-- Job 1: Mirailabs -->
+      <div class="job">
+        <div class="job-header clearfix">
+          <div>
+            <span class="job-title">Senior Game Developer</span> |
+            <span class="company">Mirailabs</span>
+            <span class="period">Mar 2022 – Present</span>
+          </div>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              Developed backend systems for AI Agent chat application "Foxy"
+              (foxychat.ai)
+            </li>
+            <li>
+              Integrated Crypto payment and Telegram Star payment systems for
+              "MergePals" game (mergepals.io)
+            </li>
+            <li>
+              Designed and implemented multiplayer core systems for "Pegaxy V2"
+              (pegaxy.io), a skill-based horse racing game with blockchain
+              integration
+            </li>
+            <li>
+              Built Unity SDK for guild management and trading project "Shards
+              Tech" (shards.tech)
+            </li>
+            <li>
+              Developed multiplayer features for "Petopia" game
+              (petopiagame.io), enhancing real-time player interactions
+            </li>
+            <li>
+              Created 3D preview and avatar capture system for Pegaxy
+              marketplace, improving user experience and asset visualization
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 2: OneSoft Falcon -->
+      <div class="job">
+        <div class="job-header clearfix">
+          <div>
+            <span class="job-title">Game Developer</span> |
+            <span class="company">OneSoft Falcon</span>
+            <span class="period">Mar 2021 – Mar 2022</span>
+          </div>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              Developed "Fun Guy", a 3D multiplayer party game similar to Fall
+              Guys, implementing core gameplay mechanics and multiplayer
+              synchronization
+            </li>
+            <li>
+              Participated in early NFT game prototyping and smart contract
+              integration, exploring blockchain-based gaming mechanics
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 3: BlackWolf Studio -->
+      <div class="job">
+        <div class="job-header clearfix">
+          <div>
+            <span class="job-title">Lead Game Developer</span> |
+            <span class="company">Sói Đen (BlackWolf Studio)</span>
+            <span class="period">Nov 2020 – Mar 2021</span>
+          </div>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              Lead and guide a small team in creating Casual and Hyper-Casual
+              game products
+            </li>
+            <li>
+              Managed project timelines, code reviews, and technical solutions
+              for "Stick War" and "Word Game" projects
+            </li>
+            <li>
+              Provided technical direction and implemented performance
+              optimization strategies, improving frame rates and load times
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 4: Sân Đình Studio -->
+      <div class="job">
+        <div class="job-header clearfix">
+          <div>
+            <span class="job-title">Full-Stack Game Developer</span> |
+            <span class="company">Sân Đình Studio</span>
+            <span class="period">May 2020 – Nov 2020</span>
+          </div>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              Developed "Tổ Tôm Online" traditional card game with real-time
+              multiplayer functionality
+            </li>
+            <li>Integrated with server logic using SmartFox server</li>
+            <li>
+              Collaborated with backend engineers to optimize latency and room
+              management
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 5: Zitga Studio -->
+      <div class="job">
+        <div class="job-header clearfix">
+          <div>
+            <span class="job-title">Unity Game Developer</span> |
+            <span class="company">Zitga Studio</span>
+            <span class="period">May 2019 – May 2020</span>
+          </div>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              Developed "Stickman Legends" and "Cyber Fighters" mobile action
+              games with millions of downloads
+            </li>
+            <li>
+              Designed and implemented systems using best practices and design
+              patterns
+            </li>
+            <li>
+              Contributed to game balancing and live-ops updates, maintaining
+              player engagement and retention
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 6: Zergitas Studio -->
+      <div class="job">
+        <div class="job-header clearfix">
+          <div>
+            <span class="job-title">Unity Game Developer</span> |
+            <span class="company">Zergitas Studio</span>
+            <span class="period">Dec 2017 – Dec 2018</span>
+          </div>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>
+              Developed casual puzzle games including "Happy Glass" and "Connect
+              Dots"
+            </li>
+            <li>
+              Implemented core gameplay mechanics, physics systems, and UI
+              transitions
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="education-item">
+        <div class="degree">Bachelor of Computer Science</div>
+        <div class="university">
+          University of Engineering and Technology – Vietnam National
+          University, Hanoi
+        </div>
+        <div class="period">2015 – 2020</div>
+        <div class="education-details">
+          <ul>
+            <li>
+              <strong>Champion</strong> – FPT Digital Race 2018 (Self-driving
+              Car Competition)
+            </li>
+            <li>
+              <strong>Finalist</strong> – Procon 2016 Programming Competition
+            </li>
+            <li>
+              <strong>Internship Project:</strong> VR Virtual Exhibition Room
+            </li>
+            <li>
+              <strong>Graduation Thesis:</strong> Eye-controlled Virtual
+              Keyboard for Motor-Impaired Users
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
