@@ -224,7 +224,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.08;
 }
 
 .hero::before {
@@ -236,15 +236,16 @@ section {
   bottom: 0;
   background: radial-gradient(
       circle at 20% 80%,
-      rgba(37, 99, 235, 0.1) 0%,
+      rgba(37, 99, 235, 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(245, 158, 11, 0.1) 0%,
+      rgba(245, 158, 11, 0.08) 0%,
       transparent 50%
     );
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-container {
@@ -256,11 +257,17 @@ section {
   gap: var(--spacing-3xl);
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-content {
   animation: fadeInLeft 0.8s ease-out;
+  padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 .hero-title {
